@@ -1,0 +1,54 @@
+@keyframes showMenu {
+    0% {
+        height: 0;
+        left: -60%;
+    }
+    100% {
+        left: 0;
+        height: 100vh;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        left: 0;
+        height: 100vh;
+    }
+    100% {
+        left: -60%;
+        height: 0;
+    }
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    background-color: lightcyan;
+}
+
+.menu-aside {
+    background-color: lightblue;
+    position: absolute;
+    width: 80%;
+    left: -60%;
+}
+
+.menu-aside.show-menu {
+    height: 100vh;
+    left: 0;
+    animation: showMenu 2s;
+}
+
+.menu-aside.hide-menu {
+    height: 0;
+    animation: hideMenu 2s;
+}
+
+.arrow {
+    padding: 1rem; 
+    background-color: lightcoral;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(100%);
+}

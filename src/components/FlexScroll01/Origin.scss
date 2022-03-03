@@ -1,0 +1,104 @@
+#origin {
+    background-color: lightgreen;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: lightseagreen;
+        text-align: center;
+    }
+
+    h2 {
+        background-color: lightskyblue;
+        text-align: center;
+    }
+    /* ------------- */
+    .layout-body-wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: mediumpurple;
+        height: 15rem;
+    }
+    
+    .inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        background-color: magenta;
+    }
+
+    ul.ul-titles {
+        background-color: lightcyan;
+        display: flex;
+        border: 1px solid;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        width: max-content;
+
+        li {
+            margin-right: 1rem;
+            background-color: lightslategray;
+            border: 1px solid red;
+            padding: 0.1rem;
+            word-break: break-all;
+            width: 10rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    ul.ul-elements {
+        background-color: mediumseagreen;
+        width: max-content;
+        overflow-y: scroll;
+
+        li {
+            background-color: linen;
+            border: 1px solid red;
+            display: flex;
+            padding: .5rem;
+            margin-bottom: 1rem;
+            min-height: 5rem;
+
+            &:last-of-type {
+                margin-bottom: 0rem;
+            }
+
+            .info {
+                // word-break: break-all;
+                background-color: lightsteelblue;
+                border: 1px solid green;
+                padding: 0.3rem;
+                margin-right: 1rem;
+                word-break: break-all;
+                width: 10rem;
+
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #layout-flex-01 {
+        .layout-body-wrapper {
+            overflow-x: scroll;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+    }
+}

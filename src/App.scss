@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-app {
+
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
