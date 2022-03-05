@@ -88,34 +88,34 @@ const data = [
 const LayoutFlex01 = () => {
     return (
         <div className='container-fluid' id='layout-flex-01'>
-            <h1>Title</h1>
+            <h1 className='top'>Title</h1>
 
-            <div className="container-fluid layout-body-wrapper">
+            <div className="layout-body-wrapper">
                 <div className="inner-wrapper">
-                    <div className="test">
-                        <ul className="ul-titles">
-                            {titles.map((el, i) => {
-                                return <li className="col li-title" key={i}>{el}</li>
-                            })}
-                        </ul>
+                    <ul className="ul-titles">
+                        {titles.map((el, i) => {
+                            return <li className="col li-title" key={i}>{el}</li>
+                        })}
+                    </ul>
 
-                        {/* elements */}
-                        <ul className="ul-elements">
-                            {data.map((el, i) => {
-                                const keys = Object.keys(el).filter(el => el !== 'id');
-                                return <li className='col li-item' key={i}>
-                                    {keys.map((k, i) => {
-                                        return <div className="col info" key={i}>{el[k]}</div>
-                                    })}
-                                </li>
-                            })}
-                        </ul>
-                    </div>
+                    {/* elements */}
+                    <ul className="ul-elements">
+                        {data.map((el, i) => {
+                            const keys = Object.keys(el).filter(el => el !== 'id');
+                            return <li className='col li-item' key={i}>
+                                {keys.map((k, i) => {
+                                    return <div className="col info" key={i}>{el[k]}</div>
+                                })}
+                            </li>
+                        })}
+                    </ul>
                 </div>
+
+
             </div>
 
 
-            <h2>Pagination</h2>
+            <h2 className='bottom'>Pagination</h2>
         </div>
     )
 }
